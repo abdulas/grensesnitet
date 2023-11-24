@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utøverprofil</title>
+    <!-- Legg til CSS-stiler -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            width: 80%;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Utøver-seksjon -->
+<section id="athlete-profile">
+    <h2>Utøverinformasjon</h2>
+
+    <!-- Utøverdata -->
+    <label for="athleteName">Navn:</label>
+    <input type="text" id="athleteName" name="athleteName" value="John Doe" disabled>
+
+    <label for="athleteId">Unik ID:</label>
+    <input type="text" id="athleteId" name="athleteId" value="abc-123-979" disabled>
+
+    <label for="athleteGender">Kjønn:</label>
+    <input type="text" id="athleteGender" name="athleteGender" value="Mann" disabled>
+
+    <label for="athleteSport">Type sport:</label>
+    <input type="text" id="athleteSport" name="athleteSport" value="Løp" disabled>
+
+    <!-- År, konkurranser og treningsmål -->
+    <h2>År, Konkurranser og Treningsmål</h2>
+
+    <!-- År -->
+    <h3>År</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>År</th>
+                <th>Handlinger</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamisk fyll inn år data her -->
+            <tr>
+                <td>2023</td>
+                <td>
+                    <button>Endre</button>
+                    <button>Slett</button>
+                </td>
+            </tr>
+            <!-- Legg til flere rader etter behov -->
+        </tbody>
+    </table>
+
+    <!-- Konkurranser -->
+    <h3>Konkurranser</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Navn</th>
+                <th>Dato</th>
+                <th>Sted</th>
+                <th>Mål</th>
+                <th>Type</th>
+                <th>Prioritet</th>
+                <th>Kommentar</th>
+                <th>Handlinger</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamisk fyll inn konkurransedata her -->
+            <tr>
+                <td>Maraton Oslo</td>
+                <td>2023-05-15</td>
+                <td>Oslo</td>
+                <td>Fullføre</td>
+                <td>Løp</td>
+                <td>A</td>
+                <td>God form</td>
+                <td>
+                    <button>Endre</button>
+                    <button>Slett</button>
+                </td>
+            </tr>
+            <!-- Legg til flere rader etter behov -->
+        </tbody>
+    </table>
+
+    <!-- Treningsmål -->
+    <h3>Treningsmål</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Navn</th>
+                <th>Dato</th>
+                <th>Mål</th>
+                <th>Kommentar</th>
+                <th>Handlinger</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamisk fyll inn treningsmåldata her -->
+            <tr>
+                <td>Løpe 10 km</td>
+                <td>2023-06-01</td>
+                <td>45 minutter</td>
+                <td>Øke hastigheten gradvis</td>
+                <td>
+                    <button>Endre</button>
+                    <button>Slett</button>
+                </td>
+            </tr>
+            <!-- Legg til flere rader etter behov -->
+        </tbody>
+    </table>
+</section>
+
+<!-- Økt-tabell -->
+<section id="session-table">
+    <h2>Økter</h2>
+
+    <!-- Økt-tabell -->
+    <table>
+        <thead>
+            <tr>
+                <th>Dato</th>
+                <th>Navn</th>
+                <th>Tags</th>
+                <th>Type aktivitet</th>
+                <th>Handlinger</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamisk fyll inn øktdedata her -->
+            <tr>
+                <td>2023-04-10</td>
+                <td>Morgenløp</td>
+                <td>Løping, Morgen</td>
+                <td>Løp</td>
+                <td>
+                    <button>Endre</button>
+                    <button>Slett</button>
+                </td>
+            </tr>
+            <!-- Legg til flere rader etter behov -->
+        </tbody>
+    </table>
+</section>
+
+</body>
+</html>

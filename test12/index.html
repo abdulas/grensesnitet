@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Legg til CSS-stiler -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            width: 80%;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<!-- Globalt Dashboard-seksjon -->
+<section id="global-dashboard">
+    <h2>Globalt Dashboard</h2>
+
+    <!-- Utøver-tabell -->
+    <h3>Utøvere</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Navn</th>
+                <th>Kjønn</th>
+                <th>Type sport</th>
+                <th>Handlinger</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Utøverdata vil bli dynamisk fylt inn her -->
+            <tr>
+                <td>abc-123-979</td>
+                <td>John Doe</td>
+                <td>Mann</td>
+                <td>Løp</td>
+                <td>
+                    <button>Vis økter</button>
+                    <button>Vis rapporter</button>
+                </td>
+            </tr>
+            <!-- Legg til flere rader etter behov -->
+        </tbody>
+    </table>
+</section>
+
+</body>
+</html>

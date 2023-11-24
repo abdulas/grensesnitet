@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluering</title>
+    <!-- Legg til CSS-stiler -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            width: 80%;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<!-- Markering og Sammenligning -->
+<section id="mark-and-compare">
+    <h2>Markering og Sammenligning</h2>
+
+    <!-- Markering av økter -->
+    <table>
+        <thead>
+            <tr>
+                <th>Økt</th>
+                <th>Mal</th>
+                <th>Rapport</th>
+                <th>Markert</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamisk fyll inn øktdataliste her -->
+            <tr>
+                <td>2023-04-10 Morgenløp</td>
+                <td>Løpemal</td>
+                <td>Rapport tilgjengelig</td>
+                <td><input type="checkbox" name="markedSession"></td>
+            </tr>
+            <!-- Legg til flere rader etter behov -->
+        </tbody>
+    </table>
+
+    <!-- Analyser-knapp -->
+    <button id="analyzeButton">Analyser (0)</button>
+</section>
+
+<!-- Analyse-side -->
+<section id="analysis-page" style="display: none;">
+    <h2>Analysér Økter</h2>
+
+    <!-- Filtrer måleparametre -->
+    <label for="filterParameters">Filtrer bort måleparametre:</label>
+    <select id="filterParameters" name="filterParameters">
+        <option value="puls">Puls</option>
+        <option value="watt">Watt</option>
+        <option value="fart">Fart</option>
+    </select>
+
+    <!-- Matrise av måleparametre -->
+    <h3>Matrise av Måleparametre</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Økt</th>
+                <th>Intervall 1</th>
+                <th>Intervall 2</th>
+                <!-- Legg til flere kolonner for intervaller etter behov -->
+                <th>Snitt (Min, Max, Snitt)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamisk fyll inn matrisen her -->
+            <tr>
+                <td>2023-04-10 Morgenløp</td>
+                <td>120, 160, 140</td>
+                <td>130, 170, 150</td>
+                <!-- Legg til flere verdier for intervaller etter behov -->
+                <td>125, 165, 145</td>
+            </tr>
+            <!-- Legg til flere rader for økter etter behov -->
+        </tbody>
+    </table>
+
+    <!-- Snitt av måleparametre på tvers av øktene -->
+    <h3>Snitt av Måleparametre på Tvers av Øktene</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Snitt Min</th>
+                <th>Snitt Max</th>
+                <th>Snitt Snitt</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamisk fyll inn snittverdier her -->
+            <tr>
+                <td>125</td>
+                <td>165</td>
+                <td>145</td>
+            </tr>
+            <!-- Legg til flere rader etter behov -->
+        </tbody>
+    </table>
+</section>
+<!-- JavaScript for knappesynlighet -->
+<script>
+    document.getElementById('analyzeButton').addEventListener('click', function () {
+        document.getElementById('mark-and-compare').style.display = 'none';
+        document.getElementById('analysis-page').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>

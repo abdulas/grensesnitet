@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapporteringsside</title>
+    <!-- Legg til eventuelle CSS-stiler her -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            width: 80%;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        select, input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<!-- Rapporteringsskjema -->
+<section id="report-form">
+    <h2>Rapporter på gjennomført økt</h2>
+
+    <!-- Velg status for rapporten -->
+    <label for="status">Velg rapportstatus:</label>
+    <select id="status" name="status">
+        <option value="none">Ingen rapport</option>
+        <option value="no">Økt ikke gjennomført</option>
+        <option value="low">Økt gjennomført, dårlig kvalitet</option>
+        <option value="normal">Økt gjennomført som forventet</option>
+        <option value="high">Break-through session</option>
+    </select>
+
+    <!-- Rapportering på måleparametere -->
+    <h3>Rapportering på måleparametere</h3>
+
+    <!-- Eksempel på måleparametere (opplevd intensitet, puls, fart, watt) -->
+    <label for="intensity">Opplevd intensitet:</label>
+    <input type="number" id="intensity" name="intensity" min="1" max="10">
+
+    <label for="pulse">Puls:</label>
+    <input type="number" id="pulse" name="pulse" min="0" max="200">
+
+    <label for="speed">Fart:</label>
+    <input type="number" id="speed" name="speed" min="0" max="30">
+
+    <label for="watt">Watt:</label>
+    <input type="number" id="watt" name="watt" min="0" max="500">
+
+    <!-- Rapportering på spørsmål -->
+    <h3>Rapportering på spørsmål</h3>
+
+    <!-- Eksempel på spørsmål -->
+    <label for="question1">Hvor krevende var økten?</label>
+    <input type="text" id="question1" name="question1">
+
+    <label for="question2">Hvordan var kvaliteten og varigheten på søvnen før dagens økt?</label>
+    <textarea id="question2" name="question2"></textarea>
+
+    <!-- Kommentarfelt -->
+    <label for="comments">Kommentarer:</label>
+    <textarea id="comments" name="comments"></textarea>
+
+    <!-- Send rapport-knapp -->
+    <button type="submit">Send rapport</button>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opprett Utøver</title>
+    <!-- Legg til CSS-stiler -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            width: 80%;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!-- Opprett Utøver-skjema -->
+<section id="create-athlete-form">
+    <h2>Legg til ny utøver</h2>
+
+    <!-- Utøverinformasjon -->
+    <label for="athleteName">Navn:</label>
+    <input type="text" id="athleteName" name="athleteName" required>
+
+    <label for="athleteId">Unik ID:</label>
+    <input type="text" id="athleteId" name="athleteId" required>
+
+    <label for="athleteGender">Kjønn:</label>
+    <select id="athleteGender" name="athleteGender" required>
+        <option value="male">Mann</option>
+        <option value="female">Kvinne</option>
+    </select>
+
+    <label for="athleteSport">Type sport:</label>
+    <select id="athleteSport" name="athleteSport" required>
+        <option value="running">Løp</option>
+        <option value="cycling">Sykkel</option>
+        <!-- Legg til andre sportsalternativer etter behov -->
+    </select>
+
+    <!-- Send skjema-knapp -->
+    <button type="submit">Legg til utøver</button>
+</section>
+
+</body>
+</html>
